@@ -1,5 +1,61 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 
-body{
-    background: white;
+body {
+  font-family: "Poppins", sans-serif;
+  color: #e5e7eb;
+  overflow-x: hidden;
+}
+
+
+.fondo-futurista {
+  background: linear-gradient(135deg, #0e0e12, #1e1b4b, #111827);
+  background-size: 200% 200%;
+  animation: movimientoGradiente 8s ease infinite;
+}
+
+/* IMPORTANTE animacion, funcion propia del css para dar la animacion y el movimiento  */
+@keyframes movimientoGradiente {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+.titulo-futurista {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #c4b5fd;
+  text-shadow: 0 0 8px #8b5cf6, 0 0 16px #8b5cf6;
+  transition: all 0.3s ease;
+}
+
+.titulo-futurista:hover {
+  transform: scale(1.03);
+  text-shadow: 0 0 20px #a78bfa, 0 0 40px #8b5cf6;
+}
+
+
+.subtitulo-futurista {
+  color: #06b6d4;
+  text-shadow: 0 0 8px #06b6d4;
+  font-weight: 400;
+}
+
+
+.footer {
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.5px;
+  background: transparent; 
+  color: #bbb; 
+}
+
+.brand-code {
+  color: #1eff00; 
+  font-size: 1.1rem;
 }
