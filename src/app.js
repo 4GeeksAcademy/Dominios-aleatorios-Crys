@@ -43,17 +43,19 @@ let nombres = [
 
 let extensiones = [".com", ".es", ".io", ".dev", ".net"];
 
-//funcion que contiene la formulas con math, aqui se llama a la funcion en el for para mostrar 8 dominios 
-function generarDominio() {
-  let pron = pronombres[Math.floor(Math.random() * pronombres.length)];
-  let adj = adjetivos[Math.floor(Math.random() * adjetivos.length)];
-  let nom = nombres[Math.floor(Math.random() * nombres.length)];
-  let ext = extensiones[Math.floor(Math.random() * extensiones.length)];
+//FUNCION A CORREGIR CON LA CLASE DEL 10 DE NOVIEMBRE BUENAS PRACTICAS 
+//function generarDominio() {
+// let pron = pronombres[Math.floor(Math.random() * pronombres.length)];
+//let adj = adjetivos[Math.floor(Math.random() * adjetivos.length)];
+//let nom = nombres[Math.floor(Math.random() * nombres.length)];
+//let ext = extensiones[Math.floor(Math.random() * extensiones.length)];
 
-  let dominioAleatorio = `${pron}${adj}${nom}${ext}`;
+// Agregue la formula en una sola linea y con flecha para reutilizarla 
+let elegirAlAzar= arr => arr[Math.floor(Math.random() * arr.length)];
 
-  return dominioAleatorio;
-}
+let generarDominio = () =>
+  `${elegirAlAzar(pronombres)}${elegirAlAzar(adjetivos)}${elegirAlAzar(nombres)}${elegirAlAzar(extensiones)}`;
+
 
 
 console.log("🌐 Generador de dominios by Crys:");
